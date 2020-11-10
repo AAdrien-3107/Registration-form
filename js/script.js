@@ -175,9 +175,11 @@ mailInput.addEventListener('keyup', () => {
         // change tooltip text when a . is missing
     } else if (input.indexOf('.') === -1) {
         mailInput.nextElementSibling.textContent = 'Your email must include a .';
-        //
+      
+        //Makes sure that the user insert the correct suffix for the email".com" or ".co".
     } else if (input.indexOf('.com || .co') === -1) {
         mailInput.nextElementSibling.textContent = 'Your email must end with a .com or .co';
+   
     } else if (validMail(mailInput) !== 'success') {
         mailInput.nextElementSibling.textContent = 'Enter a valid email address';
     } else {
